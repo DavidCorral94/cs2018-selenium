@@ -13,8 +13,8 @@ public class Test {
     public static void main(String[] args) {
         // Declaration and instantiation of objects/variables
         // Firefox
-        //System.setProperty("webdriver.firefox.marionette","C:\\geckodriver.exe");
-        //WebDriver driver = new FirefoxDriver();
+        // System.setProperty("webdriver.firefox.marionette","C:\\geckodriver.exe");
+        // WebDriver driver = new FirefoxDriver();
 
         // Chrome
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
@@ -31,10 +31,7 @@ public class Test {
         // Get the actual value of the title
         actualTitle = driver.getTitle();
 
-        /*
-         * Compare the actual title of the page with the expected one and print
-         * the result as "Passed" or "Failed"
-         */
+        // Compare the actual title of the page with the expected one and print
         if (actualTitle.contentEquals(expectedTitle)) {
             System.out.println("Test Passed!");
         } else {
@@ -58,7 +55,9 @@ public class Test {
         driver.close();
     }
 
-    public void options(){
+    public void mixActionsFromSlides(){
+
+        /////////////////
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         WebElement select = driver.findElement(By.tagName("select"));
@@ -68,15 +67,19 @@ public class Test {
             option.click();
         }
 
+        /////////////////
         Select selectAux = new Select(driver.findElement(By.tagName("select")));
         selectAux.deselectAll();
         selectAux.selectByVisibleText("Edam");
 
+        /////////////////
         WebElement element = driver.findElement(By.id("submit"));
         element.submit();
 
+        /////////////////
         Alert alert = driver.switchTo().alert();
 
+        /////////////////
         driver.navigate().forward();
         driver.navigate().back();
     }

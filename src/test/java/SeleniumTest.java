@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumTest {
     private static ChromeDriver driver;
-    WebElement element;
+    private WebElement element;
 
     @BeforeClass
     public static void openBrowser() {
