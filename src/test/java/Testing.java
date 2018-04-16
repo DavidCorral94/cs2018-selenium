@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SeleniumTest {
+public class Testing {
     private static ChromeDriver driver;
     private WebElement element;
 
