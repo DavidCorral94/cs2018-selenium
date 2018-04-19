@@ -22,7 +22,6 @@ public class Testing {
 
     @Test
     public void invalidCampusLogin() {
-
         System.out.println("Starting test " + new Object() {
         }.getClass().getEnclosingMethod().getName());
         driver.get("https://campusvirtual.uca.es/es/intranet/login");
@@ -40,6 +39,7 @@ public class Testing {
         Assert.assertEquals(expectedResult, result);
         System.out.println("Ending test " + new Object() {}.getClass().getEnclosingMethod().getName());
     }
+
 
     @AfterClass
     public static void closeBrowser() {
