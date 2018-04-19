@@ -22,7 +22,7 @@ public class SampleSauceTest {
          */
 
         driver.get("https://saucelabs.com/test/guinea-pig");
-        System.out.println("title of page is: " + driver.getTitle());
+        System.out.println("Title of page is: " + driver.getTitle());
 
         driver.quit();
     }
